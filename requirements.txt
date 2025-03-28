@@ -1,0 +1,14 @@
+streamlit==1.40.1  # Use the latest available version from the error log
+ultralytics==8.2.27
+numpy==1.26.4
+Pillow==10.3.0
+folium==0.15.1
+streamlit-folium==0.13.0
+shapely==2.0.3
+pandas==2.2.3
+geopy==2.5.0
+plotly==5.22.0
+opencv-python-headless==4.9.0.80
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
+requests==2.32.3
