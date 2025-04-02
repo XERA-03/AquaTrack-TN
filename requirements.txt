@@ -1,7 +1,7 @@
 streamlit==1.40.1
 ultralytics==8.2.27
-torch==2.2.0 --index-url https://download.pytorch.org/whl/cpu
-torchvision==0.17.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.2.0 --extra-index-url https://download.pytorch.org/whl/cpu
+torchvision==0.17.0 --extra-index-url https://download.pytorch.org/whl/cpu
 opencv-python-headless==4.9.0.80
 numpy==1.26.4
 Pillow==10.3.0
@@ -9,6 +9,6 @@ folium==0.15.1
 streamlit-folium==0.13.0
 shapely==2.0.3
 pandas==2.2.3
-geopy==2.5.0
+geopy==2.4.1  
 plotly==5.22.0
 requests==2.32.3
