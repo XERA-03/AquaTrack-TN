@@ -25,14 +25,17 @@ st.set_page_config(
 )
 
 # API Keys (store in .streamlit/secrets.toml)
-API_KEYS = {
-    "OPENWEATHER": st.secrets["OPENWEATHER_API_KEY"],
-    "IUCN": st.secrets["IUCN_API_KEY"],
-    "ALPHA_VANTAGE": st.secrets["ALPHA_VANTAGE_KEY"],
-    "FISHBASE": st.secrets["FISHBASE_API_KEY"],
-    "IMD": st.secrets["IMD_API_KEY"]
-}
-
+try:
+    API_KEYS = {
+        "OPENWEATHER": st.secrets["OPENWEATHER_API_KEY"],
+        "IUCN": st.secrets["IUCN_API_KEY"],
+        "ALPHA_VANTAGE": st.secrets["ALPHA_VANTAGE_KEY"],
+        "FISHBASE": st.secrets["FISHBASE_API_KEY"],
+        "IMD": st.secrets["IMD_API_KEY"]
+    }
+except KeyError as e:
+    st.error(f"⚠️ Missing API key: {e}. Check secrets configuration.")
+    st.stop()
 # Tamil Nadu Coastal Boundaries
 TN_COASTAL_BOUNDS = {
     "min_lat": 8.0, "max_lat": 13.5,
